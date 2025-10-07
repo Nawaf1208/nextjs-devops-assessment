@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
+  // Remove output: 'standalone' for now to simplify build
 }
 
 export default nextConfig
