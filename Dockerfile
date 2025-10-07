@@ -16,9 +16,11 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Build the application
+# Build the application with debugging
 ENV NEXT_TELEMETRY_DISABLED=1
-RUN npm run build
+RUN echo "=== Starting build ===" && \
+    npm run build || (echo "=== Build failed ===" && cat /app/.next/build-manifest.json 2>/dev/null || echo "No build manifest") && \
+    exit 1
 
 # Production image, copy all the files and run next
 FROM base AS runner
