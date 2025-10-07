@@ -180,3 +180,4 @@ minikube stop
 # Delete Minikube cluster
 minikube delete
 ```
+# Triggering CI/CD
