@@ -1,4 +1,4 @@
-# Next.js DevOps Internship Assessment
+# Next.js DevOps Assessment
 
 A containerized Next.js application deployed using Docker, GitHub Actions, and Kubernetes (Minikube).
 
